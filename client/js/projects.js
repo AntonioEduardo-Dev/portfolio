@@ -2,64 +2,64 @@ function viewImagens() {
     // matriz de imagens
     const matriz_imagens = [
         {
-            imagem_src      : "simulador_erros_01.PNG",
+            imagem_src      : "simulador_erros_01.png",
             currentSlide    : "1",
-            alt             : "Simulador de Erros"
+            alt             : "Simulador de Erros - Inicio"
         },
         {
-            imagem_src      : "simulador_erros_02.PNG",
+            imagem_src      : "simulador_erros_02.png",
             currentSlide    : "2",
-            alt             : "Simulador de Erros"
+            alt             : "Simulador de Erros - Login"
         },
         {
-            imagem_src      : "simulador_erros_03.PNG",
+            imagem_src      : "simulador_erros_03.png",
             currentSlide    : "3",
-            alt             : "Simulador de Erros"
+            alt             : "Simulador de Erros - Mobile"
         },
         {
-            imagem_src      : "simulador_erros_equipe_01.PNG",
-            currentSlide    : "4",
-            alt             : "Simulador de Erros"
-        },
-        {
-            imagem_src      : "simulador_erros_equipe_02.PNG",
+            imagem_src      : "simulador_erros_equipe_02.png",
             currentSlide    : "5",
-            alt             : "Simulador de Erros"
+            alt             : "Simulador de Erros - Inicio"
         },
         {
-            imagem_src      : "simulador_erros_equipe_03.PNG",
+            imagem_src      : "simulador_erros_equipe_01.png",
+            currentSlide    : "4",
+            alt             : "Simulador de Erros - Login"
+        },
+        {
+            imagem_src      : "simulador_erros_equipe_03.png",
             currentSlide    : "6",
             alt             : "Simulador de Erros"
         },
         {
-            imagem_src      : "simulador_erros_equipe_04.PNG",
+            imagem_src      : "simulador_erros_equipe_04.png",
             currentSlide    : "7",
             alt             : "Simulador de Erros"
         },
         {
-            imagem_src      : "TytoinKids_01.PNG",
+            imagem_src      : "TytoinKids_01.png",
             currentSlide    : "8",
-            alt             : "Tytoin Kids"
+            alt             : "Tytoin Kids - Inicio"
         },
         {
-            imagem_src      : "TytoinKids_02.PNG",
+            imagem_src      : "TytoinKids_02.png",
             currentSlide    : "9",
-            alt             : "Tytoin Kids"
+            alt             : "Tytoin Kids - Login"
         },
         {
-            imagem_src      : "TytoinKids_03.PNG",
+            imagem_src      : "TytoinKids_03.png",
             currentSlide    : "10",
-            alt             : "Tytoin Kids"
+            alt             : "Tytoin Kids - Mobile"
         },
         {
-            imagem_src      : "TytoinKids_01.PNG",
+            imagem_src      : "TytoinKids_04.png",
             currentSlide    : "11",
-            alt             : "Tytoin Kids"
+            alt             : "Tytoin Kids - Produtos"
         },
         {
-            imagem_src      : "TytoinKids_02.PNG",
+            imagem_src      : "TytoinKids_05.png",
             currentSlide    : "12",
-            alt             : "Tytoin Kids"
+            alt             : "Tytoin Kids - Produto selecionado"
         }
     ]
 
@@ -69,7 +69,7 @@ function viewImagens() {
         $("#columns-projects-imagens").append(`
             <div class="imagens_view">
                 <div class="numbertext">${index+1} / ${matriz_imagens.length}</div>
-                <img src="client/assets/img/proj/${element.imagem_src}" style="width:100%">
+                <img src="client/assets/img/proj/${element.imagem_src}" style="width:100%; height:420px">
             </div>
         `);
     });
@@ -89,10 +89,12 @@ function viewImagens() {
     matriz_imagens.forEach( (element, index) => {
         $("#columns-projects-defined").append(`
             <div class="column">
-                <img class="demonstrar cursor" src="client/assets/img/proj/${element.imagem_src}" style="width:100%" onclick="currentSlide(${index})" alt="${element.alt}">
+                <img class="demonstrar cursor" src="client/assets/img/proj/${element.imagem_src}" style="width:100%" onclick="currentSlide(${index+1})" alt="${element.alt}">
             </div>
         `);
     });
 }
 
-viewImagens();
+setTimeout(() => {
+    viewImagens();
+}, 300);
