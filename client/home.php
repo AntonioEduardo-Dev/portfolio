@@ -152,7 +152,91 @@
                     </div>
                 </div>
             </section>
+            <!-- Projects -->
+            <section class="resume-section" id="projetos">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Alguns dos meus projetos</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <!-- Container for the image gallery -->
+                        <div class="container" id="columns-projects-imagens">
+                            <div class="item">            
+                                <div class="clearfix" style="">
+                                    <ul id="image-gallery" class="gallery list-unstyled cS-hidden">
+                                        <li data-thumb="client/assets/img/proj/TytoinKids_05.png"> 
+                                            <img src="client/assets/img/proj/TytoinKids_05.png" />
+                                            </li>
+                                        <li data-thumb="client/assets/img/proj/TytoinKids_05.png"> 
+                                            <img src="client/assets/img/proj/TytoinKids_05.png" />
+                                            </li>
+                                        <li data-thumb="client/assets/img/proj/TytoinKids_05.png"> 
+                                            <img src="client/assets/img/proj/TytoinKids_05.png" />
+                                            </li>
+                                        <li data-thumb="client/assets/img/proj/TytoinKids_05.png"> 
+                                            <img src="client/assets/img/proj/TytoinKids_05.png" />
+                                            </li>
+                                        <li data-thumb="client/assets/img/proj/TytoinKids_05.png"> 
+                                            <img src="client/assets/img/proj/TytoinKids_05.png" />
+                                            </li>
+                                        <li data-thumb="client/assets/img/proj/TytoinKids_05.png"> 
+                                            <img src="client/assets/img/proj/TytoinKids_05.png" />
+                                            </li>
+                                        <li data-thumb="client/assets/img/proj/TytoinKids_05.png"> 
+                                            <img src="client/assets/img/proj/TytoinKids_05.png" />
+                                            </li>
+                                        <li data-thumb="client/assets/img/proj/TytoinKids_05.png"> 
+                                            <img src="client/assets/img/proj/TytoinKids_05.png" />
+                                            </li>
+                                        <li data-thumb="client/assets/img/proj/TytoinKids_05.png"> 
+                                            <img src="client/assets/img/proj/TytoinKids_05.png" />
+                                            </li>
+                                        <li data-thumb="client/assets/img/proj/TytoinKids_05.png"> 
+                                            <img src="client/assets/img/proj/TytoinKids_05.png" />
+                                            </li>
+                                        <li data-thumb="client/assets/img/proj/TytoinKids_05.png"> 
+                                            <img src="client/assets/img/proj/TytoinKids_05.png" />
+                                            </li>
+                                        <li data-thumb="client/assets/img/proj/TytoinKids_05.png"> 
+                                            <img src="client/assets/img/proj/TytoinKids_05.png" />
+                                            </li>
+                                        <li data-thumb="client/assets/img/proj/TytoinKids_05.png"> 
+                                            <img src="client/assets/img/proj/TytoinKids_05.png" />
+                                            </li>
+                                        <li data-thumb="client/assets/img/proj/TytoinKids_05.png"> 
+                                            <img src="client/assets/img/proj/TytoinKids_05.png" />
+                                            </li>
+                                        <li data-thumb="client/assets/img/proj/TytoinKids_05.png"> 
+                                            <img src="client/assets/img/proj/TytoinKids_05.png" />
+                                            </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
         <!-- End Page Content-->
 
 <?php include_once "includes/footer.php";?>
+
+<script src="client/js/lightslider.js"></script> 
+<script>
+    $(document).ready(function() {
+        $("#content-slider").lightSlider({
+            loop:true,
+            keyPress:true
+        });
+        $('#image-gallery').lightSlider({
+            gallery:true,
+            item:1,
+            thumbItem:9,
+            slideMargin: 0,
+            speed:500,
+            auto:true,
+            loop:true,
+            onSliderLoad: function() {
+                $('#image-gallery').removeClass('cS-hidden');
+            }  
+        });
+    });
+</script>
